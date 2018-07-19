@@ -12,10 +12,8 @@ class TVShowList extends Component {
         }
       })
     }
-
-    return this.props.shows.map( (s)=> {
-      return (<TVShow show={s} key={s.id} selectShow={this.props.selectShow}/>)
-    })
+    
+    return this.props.shows.map( (s)=> <TVShow show={s} key={s.id} selectShow={this.props.selectShow}/>)
   }
 
   render() {

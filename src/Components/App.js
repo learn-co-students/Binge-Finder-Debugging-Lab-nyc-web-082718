@@ -5,8 +5,6 @@ import Nav from './Nav';
 import SelectedShowContainer from './SelectedShowContainer';
 import { Grid } from 'semantic-ui-react';
 
-
-
 class App extends Component {
   state = {
     shows: [],
@@ -53,10 +51,7 @@ class App extends Component {
   render = () => {
     return (
       <div>
-        <Nav handleFilter={this.handleFilter} handleSearch={this.handleSearch} search={this.state.searchTerm}/>
-
-
-
+        <Nav handleFilter={this.handleFilter} handleSearch={this.handleSearch} searchTerm={this.state.searchTerm}/>
         <Grid celled>
           <Grid.Column width={5}>
             {!!this.state.selectedShow ? <SelectedShowContainer selectedShow={this.state.selectedShow} episodes={this.state.episodes}/> : <div/>}
