@@ -49,6 +49,7 @@ class App extends Component {
   }
 
   render = () => {
+    console.log(this.state.shows);
     return (
       <div>
         <Nav handleFilter={this.handleFilter} handleSearch={this.handleSearch} searchTerm={this.state.searchTerm}/>
