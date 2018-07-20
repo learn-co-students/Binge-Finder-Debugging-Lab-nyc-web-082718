@@ -34,3 +34,37 @@ LAZY LOADING!! Your initial fetch only grabbed the most popular 240 shows on the
 
 TIP change your fetch to reflect the page numbers example:
 http://api.tvmaze.com/shows?page=1
+
+
+## ERRORS
+
+### Adapter:
+Missing a return in the first fetch.
+Missing invocation on JSON method in second fetch.
+
+### Nav:
+`Nav` is not receiving props.
+All Components are lowercased.
+
+### App:
+`handleFilter` method is setting state to wrong key in the state.
+`handleSearch` is losing `THIS`. (either bind or use arrow function)
+
+### SelectedShowContainer:
+`SelectedShowContainer` is exported but not as default.
+Importing `Episode` with the incorrect local path.
+
+### TVShowList:
+Accessing props incorrectly. (this.props vs props)
+Not importing `TVShow`.
+No `return` in `map` function (Implicit vs. Explicit return)
+
+### TVShow:
+Not receiving props as an argument.
+Not referencing image in props correctly.
+
+### Filter:
+Not exporting component
+
+`Episode` props named differently at `App`, `SelectedShowContainer` and `Episode` levels.
+`SearchTerm` props named differently at `App` and `Nav` level.
