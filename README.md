@@ -38,32 +38,32 @@ http://api.tvmaze.com/shows?page=1
 
 ## ERRORS
 
-### Adapter:
+#### Adapter:
 Missing a return in the first fetch.
 Missing invocation on JSON method in second fetch.
 
-### Nav:
+#### Nav:
 `Nav` is not receiving props.
 All Components are lowercased.
 
-### App:
+#### App:
 `handleFilter` method is setting state to wrong key in the state.
 `handleSearch` is losing `THIS`. (either bind or use arrow function)
 
-### SelectedShowContainer:
+#### SelectedShowContainer:
 `SelectedShowContainer` is exported but not as default.
 Importing `Episode` with the incorrect local path.
 
-### TVShowList:
+#### TVShowList:
 Accessing props incorrectly. (this.props vs props)
 Not importing `TVShow`.
 No `return` in `map` function (Implicit vs. Explicit return)
 
-### TVShow:
+#### TVShow:
 Not receiving props as an argument.
 Not referencing image in props correctly.
 
-### Filter:
+#### Filter:
 Not exporting component
 
 `Episode` props named differently at `App`, `SelectedShowContainer` and `Episode` levels.
