@@ -24,7 +24,7 @@ class App extends Component {
     window.scrollTo(0, 0)
   }
 
-  handleSearch (e){
+  handleSearch = (e) => {
     this.setState({ searchTerm: e.target.value.toLowerCase() })
   }
 
@@ -36,7 +36,7 @@ class App extends Component {
     Adapter.getShowEpisodes(show.id)
     .then((episodes) => this.setState({
       selectedShow: show,
-      episodes
+      episodes: episodes
     }))
   }
 
@@ -59,7 +59,11 @@ class App extends Component {
             {!!this.state.selectedShow ? <SelectedShowContainer selectedShow={this.state.selectedShow} allEpisodes={this.state.episodes}/> : <div/>}
           </Grid.Column>
           <Grid.Column width={11}>
-            <TVShowList shows={this.displayShows()} selectShow={this.selectShow} searchTerm={this.state.searchTerm}/>
+            <TVShowList shows={this.displayShows()}
+             selectShow={this.selectShow}
+             searchTerm={this.state.searchTerm}
+             filterRating={this.state.filterRating}
+            />
           </Grid.Column>
         </Grid>
       </div>
