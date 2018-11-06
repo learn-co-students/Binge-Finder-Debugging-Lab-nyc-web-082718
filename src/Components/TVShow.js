@@ -1,6 +1,6 @@
 import React from 'react';
 
-const tvShow = () => {
+const tvShow = (props) => {
   return (
     <div>
       <br/>
